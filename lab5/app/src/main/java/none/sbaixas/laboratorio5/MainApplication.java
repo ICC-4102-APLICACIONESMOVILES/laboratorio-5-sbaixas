@@ -16,7 +16,7 @@ public class MainApplication extends Application {
         super.onCreate();
         formDatabase = Room.databaseBuilder(getApplicationContext(),
                 FormDatabase.class, DATABASE_NAME)
-                .build();
+                .allowMainThreadQueries().build();
     }
 
 }
